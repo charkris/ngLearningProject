@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url("src/assets/resorces/HelveticaNeue.ttc");
+}
+
+* {
+  font-family: myFont;
+}
+
+
+.success-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.img-self {
+  width: 137px;
+}
+
+.message {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px;
+  /* identical to box height */
+  text-align: center;
+  /* შავი/600 */
+  color: #292929;
+}
+
+.return-btn {
+  padding: 18px 60px;
+  background: #62A1EB;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0 10px 0;
+}
+
+
+.nav-to-main {
+  font-family: myFont;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #0089A7;
+  cursor: pointer;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p > a {
+  text-decoration: none;
+}

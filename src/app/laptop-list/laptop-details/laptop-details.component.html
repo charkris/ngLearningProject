@@ -1,0 +1,128 @@
+<div class="nav-btn" (click)="moveBack()">
+  <div class="left-arrow-wrapper">
+    <img class="left-arrow" src="../../../assets/resorces/left-arrow-52.png">
+  </div>
+</div>
+<div class="container">
+  <div class="info-header">
+    <p class="info-header">ლეპტოპის ინფო</p>
+  </div>
+  <div class="upper-info">
+    <img class="img-self" src="https://pcfy.redberryinternship.ge{{laptopInfo?.laptop.image}}">
+    <ul class="employee-info">
+      <li>
+        <span class="props">სახელი:</span>
+        <div class="aaa">
+          <div class="text-align">{{laptopInfo?.user.name}}</div>
+        </div>
+      </li>
+      <li>
+        <span class="props">თიმი:</span>
+        <div class="aaa">
+          <div class="text-align">{{team}}</div>
+        </div>
+      </li>
+      <li>
+        <span class="props">პოზიცია:</span>
+        <div class="text-align">{{position}}</div>
+      </li>
+      <li>
+        <span class="props">მეილი:</span>
+        <div class="text-align">
+          {{laptopInfo?.user.email}}
+        </div>
+      </li>
+      <li>
+        <span class="props">ტელ. ნომერი:</span>
+        <div class="text-align">{{laptopInfo?.user.phone_number}}</div>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+  <div class="upper-info">
+    <ul class="employee-info">
+      <li>
+        <span class="props">სახელი:</span>
+        <span class="props">თიმი:</span>
+        <span class="props">პოზიცია:</span>
+        <span class="props">მეილი:</span>
+        <span class="props">ტელ. ნომერი:</span>
+
+        <div class="text-align">{{laptopInfo?.user.name}}</div>
+        <div class="text-align">{{team}}</div>
+
+
+        <div class="aaa">
+        </div>
+      </li>
+      <li>
+
+        <div class="aaa">
+        </div>
+      </li>
+      <li>
+      </li>
+      <li>
+        <div class="text-align">
+          {{laptopInfo?.user.email}}
+        </div>
+      </li>
+      <li>
+        <div class="text-align">{{laptopInfo?.user.phone_number}}</div>
+      </li>
+    </ul>
+  </div>
+
+
+  <hr>
+  <div class="laptop-details">
+    <ul class="laptop-info">
+      <li><span class="props">ლეპტოპის სახელი:</span>
+        <div class="text-align">
+          {{laptopInfo?.laptop.name}}
+        </div>
+      </li>
+      <li><span class="props">ლეპტოპის ბრენდი:</span>
+        <div class="text-align">
+          {{brand}}
+        </div>
+      </li>
+      <li><span class="props">RAM:</span>
+        <div class="text-align">
+          {{laptopInfo?.laptop.ram}}
+        </div>
+      </li>
+      <li><span class="props">მეხსიერების ტიპი:</span>
+        <div class="text-align">{{laptopInfo?.laptop.hard_drive_type}}</div>
+      </li>
+    </ul>
+    <ul class="laptop-info">
+      <li><span class="props">CPU:</span>
+        <div class="text-align">{{laptopInfo?.laptop.cpu.name}}</div>
+      </li>
+      <li><span class="props">CPU-ს ბირთვი:</span>
+        <div class="text-align">{{laptopInfo?.laptop.cpu.cores}}</div>
+      </li>
+      <li><span class="props">CPU-ს ნაკადი:</span>
+        <div class="text-align">{{laptopInfo?.laptop.cpu.threads}}</div>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="laptop-details">
+    <ul class="laptop-info">
+      <li><span class="props1">ლეპტოპის მდგომარეობა:</span>
+        <div class="text-align">{{laptopInfo?.laptop.state === 'new' ? 'ახალი' : 'ძველი'}}</div>
+      </li>
+      <li><span class="props1">ლეპტოპის ფასი:</span>
+        <div class="text-align">{{laptopInfo?.laptop.price}}</div>
+      </li>
+    </ul>
+    <ul class="laptop-info">
+      <li><span class="props1">შეძენის რიცხვი:</span>
+        <div class="text-align">{{laptopInfo?.laptop.purchase_date}}</div>
+      </li>
+    </ul>
+  </div>
+</div>

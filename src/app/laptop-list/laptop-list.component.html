@@ -1,0 +1,25 @@
+<div class="nav-btn" (click)="moveBack()">
+  <div class="left-arrow-wrapper">
+    <img class="left-arrow" src="../../../assets/resorces/left-arrow-52.png">
+  </div>
+</div>
+<div class="container">
+  <div class="list-header">
+    <p class="list-header">ჩანაწერების სია</p>
+  </div>
+
+  <div class="laptop-info">
+    <div class="info-wrapper" *ngFor="let arr of infoArr">
+      <div class="img-wrapper">
+        <img class="img-self" src="https://pcfy.redberryinternship.ge{{ arr.laptop.image }}">
+      </div>
+      <div class="general-details">
+        <div class="info-divider">
+          <p>{{ arr.user.name }} {{ arr.user.surname }}</p>
+          <p>{{ arr.laptop.name }}</p>
+        </div>
+        <p><a routerLink="details" (click)="onSelect(arr.laptop.id)">მეტის ნახვა</a></p>
+      </div>
+    </div>
+  </div>
+</div>

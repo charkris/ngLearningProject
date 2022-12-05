@@ -1,0 +1,32 @@
+<div class="form-wrapper">
+  <form class="main-form" [formGroup]="employeeForm" (ngSubmit)="moveToNext()">
+    <div class="fullName-wrapper">
+      <div class="name-label-wrapper">
+        <label for="name" class="name-label">სახელი</label>
+        <input type="text" id="name" formControlName="firstName">
+      </div>
+      <div class="name-label-wrapper">
+        <label for="surname" class="name-label">გვარი</label>
+        <input type="text" id="surname" formControlName="lastName">
+      </div>
+    </div>
+    <select class="team-select" formControlName="team">
+      <option>თიმი</option>
+      <option *ngFor="let arr of teamArr">
+        {{arr.name}}
+      </option>
+    </select>
+    <select class="position-select" formControlName="position">
+      <option>პოზიცია</option>
+      <option *ngFor="let arr of positionArr">
+        {{arr.name}}
+      </option>
+    </select>
+    <label class="mail-label" for="email">მეილი</label>
+    <input class="email-field" type="email" id="email" formControlName="email">
+    <label class="number-label" for="number">ტელეფონის ნომერი</label>
+    <input class="phone-number" type="text" id="number" formControlName="phoneNumber">
+    <button class="next-btn" type="submit">შემდეგი</button>
+  </form>
+</div>
+

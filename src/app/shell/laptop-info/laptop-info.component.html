@@ -1,0 +1,69 @@
+<div class="container">
+  <form class="main-form" [formGroup]="laptopForm" (ngSubmit)="showSuccess()">
+    <div class="file-wrapper">
+      <p>ჩააგდე ან ატვირთე<br>ლეპტოპის ფოტო</p>
+      <label for="file">ატვირთე</label>
+      <input type="file" id="file" class="file-style" formControlName="file" (change)="onChange($event)" accept=".png, .jpg">
+    </div>
+    <div class="brand-name">
+      <div>
+        <label for="laptop-name">ლეპტოპის სახელი</label>
+        <input type="text" id="laptop-name" class="name-field" formControlName="name">
+      </div>
+      <select class="brand-select" formControlName="brand">
+        <option>ლეპტოპის ბრენდი</option>
+        <option *ngFor="let arr of brandArr">
+          {{arr.name}}
+        </option>
+      </select>
+    </div>
+    <hr>
+    <div class="cpu-info">
+      <select class="cpu-select" formControlName="cpus">
+        <option>CPU</option>
+        <option *ngFor="let arr of cpuArr">
+          {{arr.name}}
+        </option>
+      </select>
+      <label for="cpu-core">CPU-ს ბირთვი</label>
+      <input type="text" id="cpu-core" class="cpu-fields" formControlName="cpuCore">
+      <label for="cpu-stream">CPU-ს ნაკადი</label>
+      <input type="text" id="cpu-stream" class="cpu-fields" formControlName="cpuStream">
+    </div>
+    <div class="memory-wrapper">
+      <div class="ram-wrapper">
+        <label for="ram-cap">ლეპტოპის RAM (GB)</label>
+        <input type="number" id="ram-cap" class="ram-style" formControlName="ramCapacity">
+      </div>
+      <div class="disk-wrapper">
+        <p>მეხსიერების ტიპი</p>
+        <label for="SSD">SSD</label>
+        <input type="radio" name="drive" value="SSD" id="SSD" formControlName="drive">
+        <label for="HDD">HDD</label>
+        <input type="radio" name="drive" value="HDD" id="HDD" formControlName="drive">
+      </div>
+    </div>
+    <hr>
+    <div class="date-price">
+      <div>
+        <label for="date">შეძენის რიცხვი (არჩევითი)</label>
+        <input type="date" id="date" class="buy-date" formControlName="buyDate">
+      </div>
+      <div>
+        <label for="price">ლეპტოპის ფასი</label>
+        <input type="number" id="price" placeholder="0000" class="price-lap" formControlName="price">
+      </div>
+    </div>
+    <div class="laptop-condition">
+      <p>ლეპტოპის მდგომარეობა</p>
+      <label for="new">ახალი</label>
+      <input type="radio" name="oldNew" value="new" id="new" formControlName="oldNew">
+      <label for="old">ძველი</label>
+      <input type="radio" name="oldNew" value="used" id="old" formControlName="oldNew">
+    </div>
+    <div class="nav-btns">
+      <div class="return-btn" (click)="moveBack()">უკან</div>
+      <button type="submit" class="save">დამახსოვრება</button>
+    </div>
+  </form>
+</div>
