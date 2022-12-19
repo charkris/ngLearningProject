@@ -11,7 +11,8 @@ import {LaptopListComponent} from './laptop-list/laptop-list.component';
 import {LaptopDetailsComponent} from './laptop-list/laptop-details/laptop-details.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {ApiInterceptorService} from "./api-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,14 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

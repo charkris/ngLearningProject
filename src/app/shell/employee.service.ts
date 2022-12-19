@@ -18,7 +18,7 @@ export class EmployeeService {
 
   getTeam() {
     return this.http.get<TeamResponseModel>(
-      'https://pcfy.redberryinternship.ge/api/teams'
+      'teams'
     ).pipe(
       catchError(err => throwError(err)),
       tap(resp => resp),
@@ -27,7 +27,7 @@ export class EmployeeService {
 
   getPosition() {
     return this.http.get<PositionResponseModel>(
-      'https://pcfy.redberryinternship.ge/api/positions'
+      'positions'
     ).pipe(
       catchError(err => throwError(err)),
       tap(resp => resp)

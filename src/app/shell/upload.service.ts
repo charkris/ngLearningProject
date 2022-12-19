@@ -17,7 +17,7 @@ export class UploadService {
   createRecord(bodyParams: any) {
     this.showFlag = false;
     this.success = true
-    return this.http.post<BrandModel>('https://pcfy.redberryinternship.ge/api/laptop/create',
+    return this.http.post<BrandModel>('laptop/create',
       bodyParams
     ).pipe(
       catchError(err => throwError(err)),

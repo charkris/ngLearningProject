@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://pcfy.redberryinternship.ge/api/',
   // c80c0f3ea57233f8a3d78e811a8fc3d2
-  // https://pcfy.redberryinternship.ge/api/laptops?token=c80c0f3ea57233f8a3d78e811a8fc3d2
 };
 
 /*
