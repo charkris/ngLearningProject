@@ -68,6 +68,6 @@ export class LaptopDetailsComponent implements OnInit {
   }
 
   moveBack() {
-    this.router.navigate(['/list']);
+    this.router.navigate(['/list']).then();
   }
 }
